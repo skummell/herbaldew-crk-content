@@ -1,0 +1,105 @@
+html, body { 
+    background: ;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    color: ;
+}
+
+body { 
+    font-family: ; 
+    font-size: 100%; 
+    width: 80%; 
+    margin-right: auto; 
+    margin-left: auto; 
+    padding 2.5% 2.5% 0; 
+    background: white; 
+    line height: 1.8; 
+}
+
+h1 { 
+    font-size: 1.2em ; 
+    margin-bottom: -1.5em; 
+    color: ; 
+}
+
+h2 { 
+    font-size: 3.0em ;
+    margin-bottom: .2em;
+}
+
+h3 { 
+    font-size: 2em;
+}
+
+p { 
+    margin-bottom: 1em;
+}
+
+a {
+    color: blue;
+}
+
+a:hover { 
+    color: purple; 
+}
+
+pre { 
+    font-size: ; 
+    color: ;
+    padding: .;
+	border-left: ;
+	background: ;
+	white-space: ;
+	word-wrap: ;
+	width: ;
+}
+
+dialog { 
+    width: auto; 
+    max-width: 500px; 
+    padding: 20px; 
+    border: ; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+dialog::backdrop { 
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+}
+
+.icon-bar { 
+    display: flex; /* Align icons horizontally */
+    list-tyle: none; /* Remove bullets */ 
+    margin: 0; 
+    padding: 0; 
+    background-color: #000000;
+    width: 100%; 
+    justify-content: space-around; /* Space icons evenly */
+}
+
+.icon-bar li { 
+    flex: 1;
+}
+
+.icon-bar a { 
+    display: block; 
+    text-align: center; 
+    padding: 20px 9;
+    color: white; 
+    font-size: 24px; /* Icon size */ 
+    text-decoration: none; 
+    transition: 0.3s;
+}
+
+.icon-bar a:hover { 
+    background-color: #444; /* Hover effect */
+}
+
+.container. { 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    border: 1px solid #ccc
+}
