@@ -9,7 +9,7 @@ This project complies with [Devsisters](https://www.devsisters.com/en)' [User Co
 
 **Code:** [MIT License](LICENSE) <br> 
 **Original Content:** [CC BY-NC-ND](LICENSE-ASSETS.md). <br>
-**Cookie Run Kingdom Official Elements & Assets:** Devsisters' [Terms of Service](https://policy.devsisters.com/en/terms-of-service/) <br>
+**Cookie Run Kingdom Elements & Lore:** Devsisters' [Terms of Service](https://policy.devsisters.com/en/terms-of-service/) <br>
 
 See [NOTICE](NOTICE) for licensing details.
 
