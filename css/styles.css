@@ -20,13 +20,14 @@ body {
 
 h1 { 
     font-size: 1.2em ; 
-    margin-bottom: -1.5em; 
+    margin: 0 10 5px 0; 
+    margin-bottom: -0.4em;
     color: ; 
 }
 
 h2 { 
     font-size: 3.0em ;
-    margin-bottom: .2em;
+    margin: 0;
 }
 
 h3 { 
@@ -35,6 +36,15 @@ h3 {
 
 p { 
     margin-bottom: 1em;
+}
+
+header { 
+    background: ;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 a {
@@ -69,31 +79,69 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
 }
 
-.icon-bar { 
-    display: flex; /* Align icons horizontally */
-    list-tyle: none; /* Remove bullets */ 
+.site-header { 
+    display: flex;
+    align-items: ;
+    gap: 80px; 
+}
+
+/* Checck this */
+.title-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#rightnav { 
+    align-self: center; 
+    margin-top: calc(3.0em / 2);
+}
+
+ul {
     margin: 0; 
     padding: 0; 
-    background-color: #000000;
+    display: flex; 
+    gap: 20px;
+}
+
+.preview { 
+    display: flex;
+    list-style: none;
+}
+
+.footer { 
+    list-style: none;
+}
+
+.page-tabs { 
+    display: flex; /* Align icons horizontally */
+    list-style: none; /* Remove bullets */ 
+    margin: 0; 
+    padding: 0; 
     width: 100%; 
     justify-content: space-around; /* Space icons evenly */
+    
 }
 
-.icon-bar li { 
-    flex: 1;
+.page-tabs li { 
+    flex: 1; 
+    margin: 0 6px; /* Space between buttons */
 }
 
-.icon-bar a { 
+.page-tabs a { 
     display: block; 
     text-align: center; 
-    padding: 20px 9;
+    padding: 10px 15px;
     color: white; 
-    font-size: 24px; /* Icon size */ 
-    text-decoration: none; 
+    font-size: 20px; /* Icon size */ 
+    text-decoration: none;
+    background-color: #111; /* Button Background */
+    border-radius: 6px; /* Button look */
+    white-space: nowrap; /* Prevent text wrapping */  
     transition: 0.3s;
 }
 
-.icon-bar a:hover { 
+.page-tabs a:hover { 
     background-color: #444; /* Hover effect */
 }
 
@@ -102,4 +150,22 @@ dialog::backdrop {
     margin: 20px auto; 
     padding: 20px; 
     border: 1px solid #ccc
+}
+
+.flowCenter { 
+    align-content: center;
+    display: block;
+}
+
+.button-link { 
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    color: white; 
+    text-decoration: none;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    text-align: center;
 }
