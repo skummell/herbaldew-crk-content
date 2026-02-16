@@ -1,45 +1,63 @@
+/* Site default */ 
 html, body { 
-    background: ;
+    background: #435659;
     margin: 0;
+    color: white;
 }
 
+
+/* Heading default */ 
 h1, h2, h3, h4, h5, h6 { 
-    color: ;
+    text-align: center;
 }
 
+/* Body style default */ 
 body { 
-    font-family: ; 
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
     font-size: 100%; 
     width: 80%; 
     margin-right: auto; 
     margin-left: auto; 
-    padding 2.5% 2.5% 0; 
-    background: white; 
-    line height: 1.8; 
+    padding: 2.5% 2.5% 0; 
 }
 
+
+/* Heading 1 style default */
 h1 { 
-    font-size: 1.2em ; 
+    font-size: 1em ; 
     margin: 0 10 5px 0; 
-    margin-bottom: -0.4em;
-    color: ; 
+    margin-bottom: -0.2em;
+    align-self: auto;
 }
 
+/* Heading 2 style default */ 
 h2 { 
-    font-size: 3.0em ;
+    font-size: 2.5em;
     margin: 0;
 }
 
+/* Heading 3 style default */ 
 h3 { 
     font-size: 2em;
 }
 
+h4 { 
+    font-size: 1.5em;
+}
+
+h5 { 
+    font-size: 1.2em;
+}
+
+/* Paragraph style default */
 p { 
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
 }
 
 header { 
     background: ;
+    border-bottom: 2px solid black;
+    text-align: center;
 }
 
 header a {
@@ -47,15 +65,20 @@ header a {
     color: inherit;
 }
 
+section { 
+    border-bottom: 0.5px solid black;
+}
+
 a {
-    color: blue;
+    color: white;
 }
 
 a:hover { 
-    color: purple; 
+    color: coral; 
 }
 
 pre { 
+    text-align: center;
     font-size: ; 
     color: ;
     padding: .;
@@ -79,29 +102,31 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
 }
 
-.site-header { 
+.site-header, .site-footer { 
+    background: #7DA191;
     display: flex;
-    align-items: ;
-    gap: 80px; 
+    align-items: center;
+    gap: 20px; 
+    color: black;
+    padding: 10px 20px;
+}
+
+.site-header { 
+    border-bottom: 3px solid black;
+}
+
+.site-footer ul { 
+    margin: 0; 
+    padding: 0; 
+    margin-left: auto; 
+    display: flex;
+    gap: 20px;
 }
 
 /* Checck this */
-.title-group {
+.title {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-#rightnav { 
-    align-self: center; 
-    margin-top: calc(3.0em / 2);
-}
-
-ul {
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    gap: 20px;
 }
 
 .preview { 
@@ -109,8 +134,24 @@ ul {
     list-style: none;
 }
 
+.preview li { 
+    margin: 20px;
+}
+
 .footer { 
     list-style: none;
+}
+
+.container { 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px; 
+}
+
+.flowCenter { 
+    float: center;
+    align-content: center;
+    display: block;
 }
 
 .page-tabs { 
@@ -119,19 +160,23 @@ ul {
     margin: 0; 
     padding: 0; 
     width: 100%; 
-    justify-content: space-around; /* Space icons evenly */
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    font-family: ;
     
 }
 
 .page-tabs li { 
-    flex: 1; 
+    display: block;
+    flex: 0 0 auto;
     margin: 0 6px; /* Space between buttons */
 }
 
 .page-tabs a { 
     display: block; 
     text-align: center; 
-    padding: 10px 15px;
+    padding: 10px 20px;
     color: white; 
     font-size: 20px; /* Icon size */ 
     text-decoration: none;
@@ -145,27 +190,189 @@ ul {
     background-color: #444; /* Hover effect */
 }
 
-.container. { 
-    max-width: 800px; 
-    margin: 20px auto; 
-    padding: 20px; 
-    border: 1px solid #ccc
+.page-tabs li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
 }
 
-.flowCenter { 
-    align-content: center;
+.submenu {
+    position: relative;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #444;
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    color: white;
     display: block;
 }
 
-.button-link { 
-    display: inline-block;
-    padding: 10px 20px; 
-    background-color: #007BFF; 
-    color: white; 
-    text-decoration: none;
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    cursor: pointer; 
+.submenu li a:hover {
+    background: #666;
+}
+
+.cookie-card {
+    width: 900px; 
+    background: lightblue;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; 
+    border-radius: 20px; 
+    color: darkviolet;
+    display: grid;
+    gap: 20px;
+}
+
+.header {
+    display: flex; 
+    align-items: center; 
+    gap: 15px;
+}
+
+.rarity { 
+    background: ; 
+    padding: 6px 12px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+}
+
+.cookie-name { 
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.tag { 
+    display: inline-block; 
+    padding: 6px 14px; 
+    background: #2a2a2a;
+    border-radius: 10px; 
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.meta, .identity { 
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+.visuals { 
+    display: grid;
+    grid-template-columns: 1fr 200px; 
+    gap: 20px;
+}
+
+.sprite-box, .magic-candy { 
+    background: lightyellow; 
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.stats { 
+    background: lightgreen; 
+    padding: 30px; 
+    border-radius: 12px; 
+    font-size: 1.3rem; 
+    text-align: center; 
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.tip-box {
+    background: lightpink;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.extras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.extra-box {
+    background: teal;
+    padding: 15px;
+    border-radius: 12px;
     text-align: center;
+}
+
+.fa-instagram, .fa-github { 
+    font-size: 50px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.fa-instagram:hover, .fa-github:hover { 
+    color: blue;
+}
+
+.fa-github a { 
+    color: inherit;
+}
+
+#rightnav { 
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo { 
+    text-align: center;
+}
+
+.message { 
+    background: #ffffff20;
+    border: 2px solid #ffffff40;
+    padding: 15px 20px; 
+    border-radius: 12px; 
+    font-size: 1.1rem;
+    margin: 20px 0; 
+    text-align: center;
+    width: fit-content;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.button-box {
+    background: #7DA191;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 12px;
+    position: relative;
+    margin: 20px 0;
+    width: fit-content;
+}
+
+/* The little triangle */
+.button-box::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;      /* moves triangle below the box */
+    left: 20px;         /* horizontal position of triangle */
+    border-width: 10px;
+    border-style: solid;
+    border-color: #7DA191 transparent transparent transparent;
+}
+
+.logo#in-page { 
+    background: rgb(23, 36, 160);
+    width: fit-content;
+    margin: auto;
 }
