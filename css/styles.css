@@ -287,15 +287,6 @@ dialog::backdrop {
     margin: 0; 
 }
 
-.tag { 
-    display: inline-block; 
-    padding: 6px 14px; 
-    background: #2a2a2a;
-    border-radius: 10px; 
-    font-size: 0.9rem;
-    white-space: nowrap;
-}
-
 .meta, .identity { 
     display: flex; 
     flex-direction: column;
@@ -307,10 +298,11 @@ dialog::backdrop {
     width: fit-content;
 }
 
-.cookie-card > *:not(.visuals) {
+.cookie-card > *:not(:has(.pop-up)) {
     position: relative;
     z-index: 5;
 }
+
 
 .visuals {
     position: absolute;
@@ -326,6 +318,7 @@ dialog::backdrop {
     z-index: 1;
     gap: 20px;
 }
+
 
 .sprite-box, .magic-candy { 
     position: relative;
@@ -346,8 +339,7 @@ dialog::backdrop {
 }
 
 .soulstone { 
-    margin-top: 20px;
-    z-index: 0; 
+    margin-top: 20px; 
 }
 
 .stats { 
@@ -356,8 +348,6 @@ dialog::backdrop {
     border-radius: 12px; 
     align-self: start;
     margin-top: 50px;
-    z-index: 5;
-    position: relative;
     margin-bottom: 0;
 
     width: 100%; 
@@ -596,7 +586,6 @@ button {
     z-index: 1;
 }
 
-
 .decor-sprite {
     display: flex;
     align-items: center; 
@@ -608,4 +597,68 @@ button {
     background: steelblue;
     border: 2px solid steelgray;
     border-radius: 10px;
+}
+
+.popup-dialog {
+    position: fixed;
+    inset: 0;
+    background: rgba(176, 55, 55, 1);
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.toggle:checked ~ .popup-dialog {
+    display: flex;
+}
+
+.toggle { 
+    display: none;
+}
+
+.dialog-content {
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    z-index: 10000;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 6px 12px;
+    background: #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.decor-playground { 
+    background: lightblue;
+    margin: 10px; 
+    height: 850px;
+    padding: 20px;
+    transition: background 0.3s;
+}
+
+#bg-2:checked ~ .decor-playground {
+    background: steelblue;
+}
+
+#bg-3:checked ~ .decor-playground {
+    background: rgb(64, 86, 113);
+}
+
+/* Hide the radio buttons */
+input[type="radio"][name="bg"] {
+    display: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }

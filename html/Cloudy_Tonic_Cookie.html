@@ -124,21 +124,45 @@
                         <span class="element">Element</span>
                     </div>
 
-                    <div class="identity">
-                        <span class="tag"> They/Them</span>
+                    <div class="identity" >
+                        <div class="pronouns"> 
+                            They/Them
+                        </div>
 
-                        <span class="tag"> Cookie Traits</span>
+                        
+                        <div class="traits"> 
+                            Cookie Traits
+                        </div>
+                        
+                        <div class="pop-up alias"> 
+                            <label for="alias-toggle" class="popup-trigger"> Aliases </label>
+                            <input type="checkbox" id="alias-toggle" class="toggle"> 
 
-                        <span class="tag"> Aliases</span>
-                    </div>
+                            <dialog class="popup-dialog">
+                                <div class="dialog-content">
+                                    
+                                    <p>List of aliases goes here…</p>
+
+                                    <label for="alias-toggle" class="close-btn">Close</label>
+                                </div>
+                            </dialog>
+                        </div>
+
+                    </div>  
 
                     <div class="visuals"> 
                         
-                        <div class="magic-candy"> Magic Candy</div>
+                        <div class="magic-candy"> 
+
+                            Magic Candy
+                        </div>
 
                         <div class="sprite-box"> Cookie Sprite</div>
 
-                        <div class="soulstone"> Soulstone</div>
+                        <div class="pop-up soulstone"> 
+                            Soulstone
+                        </div>
+                        
                     </div>
 
                     <div class="stats"> 
@@ -146,9 +170,29 @@
                     </div>
 
                     <div class="bonus-effects"> 
-                        <div class="tip-box">
-                            Beascuits
 
+                        <div class="pop-up tip-box beascuits"> 
+                            <label for="beascuit-toggle" class="popup-trigger"> Beascuit </label>
+
+                            <!-- 
+                                The HTML disabled global attribute is an attribute that blocks form elements 
+                                (button, input, select, textarea, fieldset, option, optgroup)
+                                interactability (can't toogle, click, tab to it, etc)
+                                Since the functionality of this feature (beascuit-toggle) is not complete and should not be interactable,
+                                I applied the disabled attribute here to prevent the user from toggling it. 
+                            -->
+
+                            <input type="checkbox" id="beascuit-toggle" class="toggle" disabled>
+                            <aside> 
+                                <dialog class="popup-dialog">
+                                    <div class="dialog-content">
+                                        
+                                        <p>Beascuit Stat Reccomendations</p>
+
+                                        <label for="beascuit-toggle" class="close-btn">Close</label>
+                                    </div>
+                                </dialog>
+                            </aside>
                         </div>
 
                         <div class="tip-box"> 
