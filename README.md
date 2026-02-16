@@ -2,6 +2,8 @@
 
 HTML & CSS Project & personal fan content hub for original designs, stories, concepts and assets set in the *[CookieRun: Kingdom](https://www.cookierun-kingdom.com/en/)* universe. <br>
 
+All original content—excluding explicitly noted third-party materials—in this repository is my own work. 
+
 This project complies with [Devsisters](https://www.devsisters.com/en)' [User Content Policy](https://policy.devsisters.com/en/content-policy/): 
 - Non-commercial
 - Follows the Terms of Service
