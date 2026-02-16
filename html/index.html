@@ -31,29 +31,21 @@
 
             <nav role="navigation" id="rightnav">
 
-                <!-- 
-                    The <menu> HTML element is a semantic alternative to <ul>. 
-                    Both <menu> and <ul> represent an unordered list of items. 
-                    The main difference between the two is that <ul> is primarily 
-                    contains items for display, while <menu> represents a toolbar
-                    containing commands that the user can perform or activate. 
-                -->
-
-                <ul class="page-tabs">
+                <ul class="page-tabs" id="cookies">
                     
                     <!-- Cookie Selection - Drowpdown Menu -->
                     <li class="dropdown"> 
                         <a href> Cookies ▼</a>
                         
                         <ul class="submenu"> 
-                            <li> <a href="Cloudy_Tonic_Cookie.html"><img src="../assets/cookie-icons/Cloudy_Tonic_Icon.png">Cloudy Tonic Cookie</a> </li>
+                            <li> <a href="Cloudy_Tonic_Cookie.html"><img src="../assets/cookie-icons/Cloudy_Tonic_Cookie_Icon.png">Cloudy Tonic Cookie</a> </li>
 
                         </ul>
 
                     </li>
 
                     <!-- Costume Set Selection - Dropdown Menu -->
-                    <li class="dropdown"> 
+                    <li class="dropdown" id="costume-sets"> 
                         <a href> Costume Sets ▼</a>
                         
                         <ul class="submenu"> 
@@ -64,7 +56,7 @@
                     </li>
 
                     <!-- Decoration Themes Selection - Dropdown Menu -->
-                    <li class="dropdown"> 
+                    <li class="dropdown" id="decor_themes"> 
                         <a href> Decoration Themes ▼</a>
                         
                         <ul class="submenu"> 
@@ -86,15 +78,18 @@
 
                 <!-- Page Disclaimer -->
 
-                <div class="container"> 
+                <aside class="container"> 
 
                     <!-- 
                         The <dialog> HTML element is a modal or non-modal dialog box
                         or other interactive component, such as a dismissible alert, 
                         inspector, or subwindow. 
 
-                        This makes it the perfect element to use for the disclaimer pop 
-                        up that appears when you open the Home page of the website.
+                        This makes it the perfect element to use for the pop-ups that appear on this website. 
+
+                        This website has two types of pop-ups made with <dialog> right now :
+                            class="disclaimer" pop-up which appears as soon as you enter the page 
+                            class="pop-up" which appears when you click on a pop-up toggle
                     -->
 
                     <dialog open class="disclaimer">
@@ -122,7 +117,7 @@
                         </form> 
                     </dialog>
 
-                </div>
+                </aside>
 
                 <!-- Opening Section -->
 
@@ -143,7 +138,7 @@
                     
 
                     <p> 
-                        HerbalDew is a fan-made CookieRun: Kingdom inspired project, completely independent from the Official Game. 
+                        <b>HerbalDew</b> is a fan-made <i>CookieRun: Kingdom</i> inspired project, completely independent from the Official Game. 
                     </p>
 
                     <p> 
@@ -151,7 +146,7 @@
                     </p>
 
                     <p>
-                        This project is a showcase of my (skummell’s) original designs, stories, concepts and assets set in the CookieRun: Kingdom universe.
+                        This project is a showcase of my original designs, stories, concepts and assets set in the CookieRun: Kingdom universe.
                     </p>
 
                     <br> 
@@ -166,13 +161,11 @@
 
                     <nav aria-label="cookie_selection">
                         <ul class="preview"> 
-                            <li><a href="cookies#Cookie_Name.html"> <img src="../assets/Cookie_Icon" alt="Cookie_Icon"> </a></li>
+                            <li><a href="Cloudy_Tonic_Cookie.html"> 
+                                <img src="../assets/Cloudy_Tonic_Cookie_Icon.png" alt="Cloudy_Tonic_Cookie_Icon"> 
+                            </a></li>
 
-                            <li><a href="cookies#Cookie_Name.html"> <img src="../assets/Cookie_Icon" alt="Cookie_Icon"> </a></li>
-                            
-                            <li><a href="cookies/Cookie_Name.html"> <img src="../assets/Cookie_Icon" alt="Cookie_Icon"> </a></li>
-
-                            <li><a href="cookies.html" class="button-box">See More</a></li>
+                            <li><a href="#cookies" class="button-box">More on Cookies Tab</a></li>
 
                         </ul>
                     </nav>
@@ -186,41 +179,41 @@
 
                     <!-- Costume Sets Preview -->
 
-                    <h5>Costume Sets</h5>
+                    <div>
 
-                    <nav aria-label="costume_set_selection">
+                        <h5>Costume Sets</h5>
 
-                        <ul class="preview"> 
-                            <li> <a href="costume_sets#Costume_Set_name.html"> <img src="../assets/Costumes_Sets/Costume_Set_Name" alt="Costume_Set_Name"> </a> </li>
+                        <nav aria-label="costume_set_selection">
 
-                            <li> <a href="costume_sets#Costume_Set_name.html"> <img src="../assets/Costumes_Sets/Costume_Set_Name" alt="Costume_Set_Name"> </a> </li>
-                            
-                            <li> <a href="costume_sets#Costume_Set_name.html"> <img src="../assets/Costumes_Sets/Costume_Set_Name" alt="Costume_Set_Name"> </a> </li>
+                            <ul class="preview"> 
+                                <li> <a href="costume_sets#Soundless_Moon-Viewing_Dream.html"> <img src="../assets/Costumes_Sets/Soundless_Moon-Viewing_Dream_Set.png" alt="Soundless_Moon-Viewing_Dream_Set"> </a> </li>
 
 
-                            <li><a href="costume_sets.html" class="button-box">See More</a></li>
-                        </ul>
+                                <li><a href="#costume-sets" class="button-box">More on Costume Sets Tab</a></li>
+                            </ul>
 
-                    </nav>
+                        </nav>
+
+                    </div>
 
                     <!-- Individual Costumes Preview -->
 
-                    <h5>Individual Costumes</h5>
+                    <div hidden>
 
-                    <nav aria-label="individual_costume_selection">
+                        <h5>Individual Costumes</h5>
 
-                        <ul class="preview"> 
-                            <li> <a href="costume_sets#Costume_name.html"> <img src="../assets/Costumes/Costume_Name" alt="Costume_Name">  </a> </li>
+                        <nav aria-label="individual_costume_selection">
 
-                            <li> <a href="costume_sets#Costume_name.html"> <img src="../assets/Costumes/Costume_Name" alt="Costume_Name">  </a> </li>
-                            
-                            <li> <a href="costume_sets#Costume_name.html"> <img src="../assets/Costumes/Costume_Name" alt="Costume_Name">  </a> </li>
+                            <ul class="preview"> 
+                                <li> <a href="costume_sets#Costume_name.html"> <img src="../assets/Costumes/Costume_Name" alt="Costume_Name">  </a> </li>
 
 
-                            <li><a href="costume_sets.html" class="button-box">See More</a></li>
-                        </ul>
+                                <li><a href="#" class="button-box">More on Decoration Themes Tab</a></li>
+                            </ul>
 
-                    </nav>
+                        </nav>
+
+                    </div>
 
                     <br>
 
@@ -230,15 +223,17 @@
 
                 <section>
                     
-                    <h4>Check out these HerbalDew Kingdom Decorations</h4>
+                    <h4>Check out these HerbalDew Decorations Themes</h4>
 
                     <nav aria-label="decoration_selection">
                         <ul class="preview">
-                            <li> <a href="decorations#decoration_Name.html"> <img src="../assets/Decoration_Name" alt="Decoration_Name"> </a> </li>
+                            <li> 
+                                <a href="Herbs_&_Nectar_Decorations.html"> 
+                                    <img src="Herbs_&_Nectar_Decor_Illustration.png" alt="Herbs_&_Nectar_Decor_Illustration"> 
+                                </a> 
+                            </li>
 
-                            <li> <a href="decorations#decoration_Name.html"> <img src="../assets/Decoration_Name" alt="Decoration_Name"> </a> </li>
-
-                            <li> <a href="decorations#decoration_Name.html"> <img src="../assets/Decoration_Name" alt="Decoration_Name"> </a> </li>
+                            <li><a href="#decor_themes" class="button-box">See More</a></li>
                         </ul>
                     </nav>
 
@@ -266,7 +261,7 @@
 
                     <li> <a href="https://www.instagram.com/skummell/"><i class="fa-brands fa-instagram"></i></a></li>
 
-                    <li> <a href="https://github.com/skummell/herbaldew-crk-content"><i class="fab fa-github"></i></a></li>
+                    <li> <a href="https://github.com/skummell/"><i class="fab fa-github"></i></a></li>
                     
        
                 </ul>
@@ -276,6 +271,7 @@
                 <pre>Unofficial fan-made content. Not affiliated with, sponsored, or approved by Devsisters.</pre>
             </p>
         </footer>
+
     </body>
 
 </html>

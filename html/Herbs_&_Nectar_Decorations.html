@@ -89,7 +89,7 @@
                     <h3>Decoration Theme</h3>
 
                     <div> 
-                        <img src="Decoration_Theme_Illustration" alt="Herbs_&_Nectar_Decor_Illustration">
+                        <img src="Herbs_&_Nectar_Decor_Illustration.png" alt="Herbs_&_Nectar_Decor_Illustration">
                     </div>
 
                     <p> Description of Decoration Theme </p>
@@ -98,50 +98,114 @@
 
                 </header>
 
-                <section class="decor-card"> 
+                <!-- Page Disclaimer -->
 
-                    <div class="box"> 
-                        <span class="decor-sprite"> Decor Sprite</span>
+                <aside style="z-index: 10" class="container">
+                    <dialog open class="disclaimer"> 
+                        
+                        <p> 
+                            The content displayed in this page is in conceptual stages and more will be updated in the future, 
+                            alongside additional interactive features.
+                        </p>
 
-                        <span class="decor-name">Decor Name</span>
-                    </div>
+                        <form method="dialog">
+                                <button type="submit" value="close">Close</button>
+                            </form> 
+                    </dialog>
+                </aside>
 
-                    <div class="details">
-                        <div class="desc">
-                            Decor Description
+                <section class="horizontal-scroll decors">
+
+                    <!--
+                        Decor 1: 
+                    -->
+                    <section class="decor-card"> 
+
+                        <!-- 
+                            The HTML global attribute draggable indicates whether the element can be dragged. 
+                            
+                            By default links and images are draggable elements. 
+                            To prevent any image in general from being dragged I used CSS 
+                            to make all images non-draggable.
+                            Then used draggable="true" here so that the decor-sprite could be dragged 
+                            (preparing for future functionality where the ability to drag this object decor-sprite
+                            object in particular will be useful)
+                        -->
+
+                        <div class="box"> 
+                            <div class="decor-sprite" draggable="true"> Decor Sprite</div>
+
+                            <div class="decor-name">Decor Name</div>
                         </div>
 
-                        <div class="decor-info"> 
+                        <div class="details">
+                            <div class="desc">
+                                Decor Description
+                            </div>
 
-                            <div class="tip-box"> Surface of Decor</div>
+                            <div class="decor-info"> 
 
-                            <div class="tip-box"> Type of Decor</div>
+                                <div class="tip-box"> Surface of Decor</div>
 
-                            <div class="tip-box"> Usable Decor?</div>
+                                <div class="tip-box"> Type of Decor</div>
 
-                            <div class="tip-box"> Cookie Decor?</div>
+                                <div class="tip-box"> Usable Decor?</div>
 
+                                <div class="tip-box"> Cookie Decor?</div>
+
+                            </div>
+
+                            <div class="decor-value">
+
+                                <div class="tip-box"> Decor PTS </div>
+
+                                <div class="tip-box"> Decor Size</div>
+
+                                <div class="tip-box"> Decor Price</div>
+                            </div>
                         </div>
 
-                        <div class="decor-value">
+                    </section>
 
-                            <div class="tip-box"> Decor PTS </div>
+                    <!--
+                        Decor 2: 
+                    -->
 
-                            <div class="tip-box"> Decor Size</div>
-
-                            <div class="tip-box"> Decor Price</div>
-                        </div>
-                    </div>
+                    <section class="message">
+                        Coming Soon... 
+                    </section>  
 
                 </section>
 
-                <section>
+                <section class="message"> 
+                    More Coming Soon 
+                </section>
+
+                <!-- 
+                    The HTML global attribute hidden tells the browser not to render the contents of an element. 
+
+                    Since this element of the page is a work in progress I don't want the user to see it nor interact with it
+                    hence it was the perfect place to use. 
+                -->
+
+                <section hidden>
 
                     <h4> Decor Playground </h4>
 
                     <input type="radio" name="bg" id="bg-1" checked>
                     <input type="radio" name="bg" id="bg-2">
                     <input type="radio" name="bg" id="bg-3">
+
+                    <!-- 
+                        The <menu> HTML element is a semantic alternative to <ul>. 
+                        Both <menu> and <ul> represent an unordered list of items. 
+                        The main difference between the two is that <ul> is primarily 
+                        contains items for display, while <menu> represents a toolbar
+                        containing commands that the user can perform or activate. 
+
+                        Since the background is affected by toggle control it's the perfect 
+                        place to implement. 
+                    -->
 
                     <menu class="background-toggle"> 
                         <h5 style="text-align: left;"> Time of Day</h5>
@@ -173,7 +237,7 @@
 
                     <li> <a href="https://www.instagram.com/skummell/"><i class="fa-brands fa-instagram"></i></a></li>
 
-                    <li> <a href="https://github.com/skummell/herbaldew-crk-content"><i class="fab fa-github"></i></a></li>
+                    <li> <a href="https://github.com/skummell/"><i class="fab fa-github"></i></a></li>
                     
        
                 </ul>
@@ -183,6 +247,7 @@
                 <pre>Unofficial fan-made content. Not affiliated with, sponsored, or approved by Devsisters.</pre>
             </p>
         </footer>
+
     </body>
 
 </html>
