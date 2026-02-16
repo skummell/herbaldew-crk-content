@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html class="cookie-page"> 
 <html lang="en"> 
 
     <head> 
@@ -87,7 +87,23 @@
                     <h3>Cloudy Tonic Cookie</h3>
                 </header>
 
-                <section draggable="true" class="cookie-card" 
+                <div style="z-index: 10" class="container">
+                    <dialog open class="disclaimer"> 
+                        
+                        <p> 
+                            The content displayed in this page is in conceptual stages and more will be updated in the future, 
+                            alongside additional interactive features.
+                        </p>
+
+                        <form method="dialog">
+                                <button type="submit" value="close">Close</button>
+                            </form> 
+                    </dialog>
+                </div>
+
+                <!-- Cookie Card -->
+
+                <section class="cookie-card" 
                          style=
                          "background-image: url('cookie-lobby.png'); 
                          background-size: cover; 
@@ -97,7 +113,7 @@
 
                     <div class="header"> 
                         <span class="rarity">Rarity</span>
-                        <h1 class="cookie-name">Cookie Name</h1>
+                        <span class="cookie-name">Cookie Name</h1>
                     </div>
 
                     <div class="meta">
@@ -117,13 +133,16 @@
                     </div>
 
                     <div class="visuals"> 
-                        <div class="sprite-box"> []</div>
+                        
+                        <div class="magic-candy"> Magic Candy</div>
 
-                        <div class="magic-candy"> ()</div>
+                        <div class="sprite-box"> [Cookie Spite</div>
+
+                        <div class="soulstone"> Soulstone</div>
                     </div>
 
                     <div class="stats"> 
-                        <>
+                        Stats right here
                     </div>
 
                     <div class="bonus-effects"> 
@@ -144,13 +163,11 @@
                     </div>
 
                     <div class="extras"> 
-                        <div class="extra-box"> Quote Icon </div>
+                        <div class="quote"> Quote Icon </div>
 
-                        <div class="extra-box"> Soulstone</div>
+                        <div class="story"> Story </div>
 
-                        <div class="extra-box"> Story </div>
-
-                        <div class="extra-box"> Costumes</div>
+                        <div class="costumes"> Costumes</div>
                     </div>
 
                 </section>
