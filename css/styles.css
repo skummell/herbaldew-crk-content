@@ -178,18 +178,6 @@ dialog::backdrop {
     position: relative;  /* for absolute positioning of submenu */
 }
 
-.page-tabs a { 
-    display: block; 
-    text-align: center; 
-    padding: 10px 20px;
-    color: white; 
-    font-size: 20px; /* Icon size */ 
-    background-color: #111; /* Button Background */
-    border-radius: 6px; /* Button look */
-    white-space: nowrap; /* Prevent text wrapping */  
-    transition: 0.3s;
-}
-
 .page-tabs a:hover { 
     background-color: #444; /* Hover effect */
 }
@@ -212,14 +200,17 @@ dialog::backdrop {
     width: fit-content;  /* tabs only as wide as text */
 }
 
-.submenu li a {
+.page-tabs a { 
+    display: block; 
+    text-align: center; 
     padding: 10px 20px;
-    color: white;
-    display: block;
-}
-
-.submenu li a:hover {
-    background: #666;
+    color: white; 
+    font-size: 20px;
+    background-color: #111;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: fit-content;  /* ADD THIS - tabs only as wide as text */
 }
 
 .submenu {
@@ -231,11 +222,28 @@ dialog::backdrop {
     padding: 0;
     background: #444;
     min-width: 100%;  /* CHANGE - at least as wide as the parent tab */
-    width: max-content;  /* expands to fit longest item */
+    width: max-content;  /* ADD THIS - expands to fit longest item */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
     z-index: 1000;
+}
+
+.page-tabs li {
+    display: block;
+    flex: 0 0 auto;
+    margin: 0 6px;
+    position: relative;  /* ADD THIS - for absolute positioning of submenu */
+}
+
+.submenu li a {
+    padding: 10px 20px;
+    color: white;
+    display: block;
+}
+
+.submenu li a:hover {
+    background: #666;
 }
 
 
