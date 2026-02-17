@@ -171,10 +171,11 @@ dialog::backdrop {
     
 }
 
-.page-tabs li { 
+.page-tabs li {
     display: block;
     flex: 0 0 auto;
-    margin: 0 6px; /* Space between buttons */
+    margin: 0 6px;
+    position: relative;  /* for absolute positioning of submenu */
 }
 
 .page-tabs a { 
@@ -198,19 +199,17 @@ dialog::backdrop {
     visibility: visible;
 }
 
-.submenu {
-    position: relative;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background: #444;
-    min-width: 160px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 1000;
+.page-tabs a { 
+    display: block; 
+    text-align: center; 
+    padding: 10px 20px;
+    color: white; 
+    font-size: 20px;
+    background-color: #111;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: 0.3s;
+    width: fit-content;  /* tabs only as wide as text */
 }
 
 .submenu li a {
@@ -222,6 +221,23 @@ dialog::backdrop {
 .submenu li a:hover {
     background: #666;
 }
+
+.submenu {
+    position: absolute;  /* CHANGE from relative to absolute */
+    top: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #444;
+    min-width: 100%;  /* CHANGE - at least as wide as the parent tab */
+    width: max-content;  /* expands to fit longest item */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
 
 /* Cookie Card - Interactive UI Design */ 
 
@@ -726,12 +742,12 @@ img {
 }
 
 .dropdown {
-    position: relative;  /* ADD THIS */
+    position: relative;  
     
 }
 
 .dropdown-content {
-    position: absolute;  /* ADD THIS */
+    position: absolute;
     top: 100%;  /* Position below the label */
     left: 0;
     
