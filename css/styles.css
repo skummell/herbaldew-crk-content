@@ -231,9 +231,9 @@ dialog::backdrop {
     grid-template-columns: 1fr 300px; /* left content | right sidebar */ 
     grid-template-areas:
         "header stats"
-        "meta bonus-effects"
-        "identity ."
-        "quote ."
+        "meta stats"
+        "identity stats"
+        "quote bonus-effects"
         "story ."
         "extras .";
     gap: 20px;
@@ -349,7 +349,7 @@ dialog::backdrop {
 
 .stats { 
     background: #435659; 
-    padding: 6px 0px; 
+    padding: 20px; 
     border-radius: 12px; 
     align-self: start;
     margin-top: 50px;
@@ -357,11 +357,16 @@ dialog::backdrop {
     color: white; 
 
     width: 100%; 
-    box-size: border-box;
+    box-sizing: border-box;
     
-
-    font-size: 1.3rem; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
+    gap: 10px;
+    
+    font-size: 1rem; 
     text-align: center; 
+
+    width: 100%; 
 }
 
 .bonus-effects {
