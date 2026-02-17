@@ -4,6 +4,8 @@ HTML & CSS Project & personal fan content hub for original designs, stories, con
 
 All original content—excluding explicitly noted third-party materials—in this repository is my own work. 
 
+Website Hosted on GitHub Page: [Here](https://skummell.github.io/herbaldew-crk-content/).
+
 This project complies with [Devsisters](https://www.devsisters.com/en)' [User Content Policy](https://policy.devsisters.com/en/content-policy/): 
 - Non-commercial
 - Follows the Terms of Service
