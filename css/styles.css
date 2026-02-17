@@ -51,7 +51,9 @@ h5 {
 
 /* Paragraph style default */
 p { 
+    text-align: left;
     margin-bottom: 1.2em;
+    line-height: 2;  /* Space in between lines */
 }
 
 header { 
@@ -495,13 +497,15 @@ button {
     grid-template-areas:
         "box details"
         "box details"
-        "box details";
+        "box details"
+        "aside aside";
 
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
 
     border-radius: 20px;
+    gap: 20px;
     column-gap: 80px; /* exact horizontal gap */
 
     background: honeydew;
@@ -529,6 +533,8 @@ button {
 .decor-value { grid-area: decor-value;}
 
 .details { grid-area: details; }
+
+.decor-card aside { grid-area: aside; }
 
 .decor-info div,
 .decor-value div {
@@ -698,8 +704,42 @@ img {
     border-radius: 12px;
     box-sizing: border-box;
     word-wrap: on;
+    text-align: center;
 }
 
 .pop-up:hover { 
     background: orange;
+}
+
+.dropdown {
+    position: relative;  /* ADD THIS */
+    
+}
+
+.dropdown-content {
+    position: absolute;  /* ADD THIS */
+    top: 100%;  /* Position below the label */
+    left: 0;
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #7DA191;
+    border-radius: 12px;
+    padding: 0 10px;
+    
+    background: #435659;
+    color: white;
+    
+    min-width: 200px;  /* Set a minimum width */
+    z-index: 10;
+
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+}
+
+.toggle:checked ~ .dropdown-content {
+    max-height: 500px;
+    padding: 10px;
+    margin-top: 5px;
 }
