@@ -238,7 +238,7 @@ dialog::backdrop {
         "extras .";
     gap: 20px;
 
-    max-width: 900px;
+    max-width: 1200px;
     margin: 20px auto; 
     padding: 20px;
     border-radius: 20px;
@@ -354,24 +354,33 @@ dialog::backdrop {
     align-self: start;
     margin-top: 50px;
     margin-bottom: 0;
+    margin-left: -250px; 
     color: white; 
 
-    width: 100%; 
+    width: calc(100% + 250px);  
     box-sizing: border-box;
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;  /* 3 equal columns */
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     
-    font-size: 1rem; 
+    font-size: 0.9rem;
     text-align: center; 
+}
 
-    width: 100%; 
+.stats > div {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    padding: 5px;
 }
 
 .bonus-effects {
-    padding: 6px 0px;
-    width: 100%;
+    padding: 20px;
+    width: calc(100% + 290px);  
+    margin-left: -270px;  
+    box-sizing: border-box;
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
